@@ -1,0 +1,132 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+h1, h2, h3, h4, p, ul, ol, li { margin: 0; }
+
+input, button, textarea, select { font: inherit; } 
+
+ul, ol { list-style: none; }
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Global Styles */
+
+/* Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+    --grey: #333950;
+    --blue-grey: #747B95;
+    --royal-blue: #5175FF;
+    --white: #FFFFFF;
+    --salmon: #F05B5B;
+    --sky-blue: #829CFF;
+    --dark-grey: #25293A;
+    --grey-opaque: #333950 15.33%;
+    --light-blue: #B4C4FF;   
+}
+
+/* Container */
+.container {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0px 40px;
+}
+
+/* Fonts */
+body {
+    font-family: 'Kumbh Sans', sans-serif;   
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 18px;
+    color: var(--blue-grey);
+}
+
+.p1 {
+    font-size: 18px;
+}
+
+.p2 {
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--grey);
+}
+
+h1 {   
+    font-size: 56px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 48px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    width: 170px;
+    height: 55px;
+    border-radius: 50px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.btn-dark {   
+    background-color: var(--royal-blue);
+    color: var(--white);    
+}
+
+.btn-light {
+    background-color: var(--white);
+    color: var(--royal-blue); 
+}
+
+.btn-medium {
+    background-color: var(--light-blue);
+    color: var(--royal-blue); 
+}
+
+/* Layout */
+
+/* Hero Section */
+.hero__content {
+    padding-top: 80px;
+    display: flex;
+}
+
+.hero__logo {
+    margin-bottom: 170px;
+}
+
+.hero__header {
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hero__paragraph {
+    max-width: 540px;
+    margin-bottom: 40px;
+}

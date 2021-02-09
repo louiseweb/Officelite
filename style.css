@@ -32,14 +32,14 @@ img {
     --sky-blue: #829CFF;
     --dark-grey: #25293A;
     --grey-opaque: #333950 15.33%;
-    --light-blue: #B4C4FF;   
+    --light-blue: #B4C4FF;
 }
 
 /* Container */
 .container {
-    width: 1110px;
+    max-width: calc(1110px + 160px);
     margin: 0 auto;
-    padding: 0px 40px;
+    padding: 0px 80px;
 }
 
 /* Fonts */
@@ -77,6 +77,15 @@ h2 {
 h3 {
     font-size: 16px;
     line-height: 48px;
+    text-transform: uppercase;
+}
+
+.txt-light {
+    color: var(--white);
+}
+
+.txt-dark {
+    color: var(--dark-grey);
 }
 
 /* Buttons */
@@ -109,12 +118,27 @@ button:hover {
     color: var(--royal-blue); 
 }
 
+.bg-light {
+    background-color: var(--white);
+}
+
+.bg-dark {
+    background-color: var(--royal-blue);
+}
+
 /* Layout */
 
 /* Hero Section */
+.hero {
+    background-image: url('assets/home/bg-pattern-header.svg');
+    background-repeat: no-repeat;
+    background-position: 740px -400px;
+    margin-bottom: 257px;
+}
+
 .hero__content {
     padding-top: 80px;
-    display: flex;
+    display: flex;   
 }
 
 .hero__logo {
@@ -129,4 +153,81 @@ button:hover {
 .hero__paragraph {
     max-width: 540px;
     margin-bottom: 40px;
+}
+
+.hero__content-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero__image {
+  transform: translate(24px, 160px);
+}
+
+/* Offer Section */
+.offer {
+    display: flex;
+    height: 508px;    
+}
+
+.offer__item {  
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.offer__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.pro {
+    background-image: url('assets/home/bg-pattern-pricing.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.offer__heading {
+    margin-bottom: 40px;
+}
+
+.offer__price, 
+.offer__features {
+    margin-bottom: 20px;
+}
+
+.offer__btn {
+    margin-top: 15px;
+}
+
+/* Footer Section */
+
+.footer {
+    background-color: var(--dark-grey);
+    transform: translateY(-260px);
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 600px;
+    padding-bottom: 90px;
+}
+
+.footer__countdown {
+    display: flex;
+}
+
+.footer__time {
+    background-color: var(--grey);
+    margin-right: 15px;
+    border-radius: 10px;
+    padding: 25px 15px;
+    text-align: center;
 }

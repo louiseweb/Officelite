@@ -6,13 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 
 <body>
   <!-- Hero Section -->
-  <header class="hero">
+  <header class="hero bg-container">
     <div class="hero__content container">
       <div class="hero__content-left">
         <img class="hero__logo" src="assets/shared/logo.svg" alt="Officelite Logo">
@@ -20,7 +19,7 @@
         <p class="hero__paragraph">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite
           is
           the new collaboration platform built with an intuitive interface to improve productivity.</p>
-        <button class="btn-dark">Get Started</button>
+        <a href="sign-up.html"><button class="btn-dark">Get Started</button></a>
       </div>
       <div class="hero__content-right">
         <img class="hero__image" src="assets/home/illustration-charts.svg" alt="Chart Illustration">
@@ -33,56 +32,58 @@
     <div class="offer__item basic bg-light">
       <h2 class="offer__heading">Basic</h2>
       <h1 class="offer__price">Free</h1>
-      <p class="offer__features p2 txt-dark">Up to 5 users for free</p>
+      <p class="offer__features p2 txt-dark mb">Up to 5 users for free</p>
       <p class="offer__features p2">Basic document collaboration</p>
       <p class="offer__features p2">2 gb storage</p>
       <p class="offer__features p2">Great security and support</p>
-      <button class="offer__btn btn-medium">Try for Free</button>
+      <a href="sign-up.html"><button class="offer__btn btn-medium">Try for Free</button></a>
     </div>
     <div class="offer__item pro bg-dark">
       <h2 class="offer__heading txt-light">Pro</h2>
       <h1 class="offer__price txt-light">$9.99</h1>
-      <p class="offer__features p2 txt-light">Per user, billed monthly</p>
+      <p class="offer__features p2 txt-light mb">Per user, billed monthly</p>
       <p class="offer__features p2 txt-light">All essential integrations</p>
       <p class="offer__features p2 txt-light">50 gb storage</p>
       <p class="offer__features p2 txt-light">More control and insights</p>
-      <button class="offer__btn btn-light">Try for Free</button>
+      <a href="sign-up.html"><button class="offer__btn btn-light">Try for Free</button></a>
     </div>
     <div class="offer__item ultimate bg-light">
       <h2 class="offer__heading">Ultimate</h2>
       <h1 class="offer__price">$19.99</h1>
-      <p class="offer__features p2 txt-dark">Per user, billed monthly</p>
+      <p class="offer__features p2 txt-dark mb">Per user, billed monthly</p>
       <p class="offer__features p2">Robust work management</p>
       <p class="offer__features p2">100 gb storage</p>
       <p class="offer__features p2">VIP support</p>
-      <button class="offer__btn btn-medium">Try for Free</button>
+      <a href="sign-up.html"><button class="offer__btn btn-medium">Try for Free</button></a>
     </div>
   </section>
+
+  <!-- Footer Section -->
   <footer class="footer">
     <div class="footer__content container">
       <div class="footer__left">
-        <h3>Coming <span>4 Nov 2020</span></h3>
+        <h3 class="extra-ls txt-light">Coming <span class="txt-primary">4 Nov 2020</span></h3>
         <div class="footer__countdown">
-          <div class="footer__time">
+          <div class="footer__time bg-grey">
             <h1 class="txt-light">47</h1>
             <p class="p2">Days</p>
           </div>
-          <div class="footer__time">
+          <div class="footer__time bg-grey">
             <h1 class="txt-light">07</h1>
             <p class="p2">Hours</p>
           </div>
-          <div class="footer__time">
-            <h1 class="txt-light"> 56</h1>
+          <div class="footer__time bg-grey">
+            <h1 class="txt-light">56</h1>
             <p class="p2">Min</p>
           </div>
-          <div class="footer__time">
+          <div class="footer__time bg-grey">
             <h1 class="txt-light">14</h1>
             <p class="p2">Sec</p>
           </div>
         </div>
       </div>
       <div class="footer__right">
-        <button>Get Started</button>
+        <a href="sign-up.html"><button class="btn-dark">Get Started</button></a>
       </div>
     </div>
 

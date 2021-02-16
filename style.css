@@ -1,3 +1,6 @@
+/* Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 /* Reset */
 * {
     margin: 0;
@@ -17,16 +20,12 @@ img {
     display: block;
 }
 
-/* Global Styles */
-
-/* Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-
 /* Variables */
 :root {
     --grey: #333950;
     --blue-grey: #747B95;
     --royal-blue: #5175FF;
+    --royal-blue-opaque: 81,117,255;
     --white: #FFFFFF;
     --salmon: #F05B5B;
     --sky-blue: #829CFF;
@@ -36,6 +35,12 @@ img {
 }
 
 /* Container */
+/* .bg-container {
+    max-width: 100%;
+    margin: 0 auto;
+    border: blueviolet solid 1px;
+} */
+
 .container {
     max-width: calc(1110px + 160px);
     margin: 0 auto;
@@ -49,6 +54,7 @@ body {
     line-height: 28px;
     font-size: 18px;
     color: var(--blue-grey);
+    overflow-x: hidden;
 }
 
 .p1 {
@@ -78,14 +84,26 @@ h3 {
     font-size: 16px;
     line-height: 48px;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
+
+/* Text Colour */
 .txt-light {
     color: var(--white);
 }
 
 .txt-dark {
     color: var(--dark-grey);
+}
+
+.txt-primary {
+    color: var(--royal-blue);
+}
+
+/* Letter spacing */
+.extra-ls {
+    letter-spacing: 5px;
 }
 
 /* Buttons */
@@ -99,13 +117,13 @@ button {
     border-radius: 50px;
 }
 
-button:hover {
-    opacity: 0.8;
-}
-
 .btn-dark {   
     background-color: var(--royal-blue);
     color: var(--white);    
+}
+
+.btn-dark:Hover {
+    opacity: 0.8;
 }
 
 .btn-light {
@@ -113,9 +131,17 @@ button:hover {
     color: var(--royal-blue); 
 }
 
+.btn-light:hover {
+    color: rgba(var(--royal-blue-opaque), 0.5);
+}
+
 .btn-medium {
-    background-color: var(--light-blue);
+    background-color: rgba(var(--royal-blue-opaque), 0.1);
     color: var(--royal-blue); 
+}
+
+.btn-medium:hover {
+    background-color: rgba(var(--royal-blue-opaque), 0.2);
 }
 
 .bg-light {
@@ -126,19 +152,47 @@ button:hover {
     background-color: var(--royal-blue);
 }
 
+.bg-light-blue {
+    background-color: var(--light-blue);
+}
+
+.bg-grey {
+    background-color: var(--grey);
+}
+
+.bg-royal-blue-opaque {
+    background-color: rgba(var(--royal-blue-opaque), 0.1);
+}
+
+/* Margin and Padding */
+
+.mb {
+    margin-bottom: 65px;
+}
+
 /* Layout */
 
 /* Hero Section */
 .hero {
-    background-image: url('assets/home/bg-pattern-header.svg');
-    background-repeat: no-repeat;
-    background-position: 740px -400px;
+    height: 100%;
     margin-bottom: 257px;
 }
 
 .hero__content {
     padding-top: 80px;
-    display: flex;   
+    display: flex;
+    position: relative;
+}
+
+.hero__content::before {
+    position: absolute;
+    content: '';
+    top: -450px;
+    left: 575px;
+    height: 1500px;
+    width: 100%;
+    background-image: url('assets/home/bg-pattern-header.svg');
+    background-repeat: no-repeat;
 }
 
 .hero__logo {
@@ -201,33 +255,85 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.mb {
+    margin-bottom: 58px;
+}
+
 .offer__btn {
     margin-top: 15px;
 }
 
 /* Footer Section */
-
 .footer {
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -265px;
+    left: 0px;
+    height: 600px;
+    width: 100%;   
     background-color: var(--dark-grey);
-    transform: translateY(-260px);
 }
 
 .footer__content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    padding-top: 90px;
+}
+
+.footer__content::before {
+    content: '';
+    position: absolute;
+    top: -265px;
+    left: -600px;
     height: 600px;
-    padding-bottom: 90px;
+    width: 1700px;
+    background-image: url('assets/home/bg-pattern-footer.svg');
+    background-repeat: no-repeat;
+    background-position-y: -600px;
+    background-position-x: -200px;
+}
+
+.footer__countdown-heading span {
+    color: var(--royal-blue);
 }
 
 .footer__countdown {
     display: flex;
+    position: relative;
+    z-index: 1;
 }
 
 .footer__time {
-    background-color: var(--grey);
     margin-right: 15px;
     border-radius: 10px;
-    padding: 25px 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Sign Up Page */
+.sign-up__content {
+    display: flex;
+}
+
+.sign-up__countdown-heading span {
+    color: var(--royal-blue);
+}
+
+.sign-up__countdown {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.sign-up__time {
+    margin-right: 15px;
+    border-radius: 10px;
+    padding: 15px;
     text-align: center;
 }

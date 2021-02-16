@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
-    <title>Frontend Mentor | Officelite coming soon site</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
+
 <body>
-  Work smarter. Save time.
-
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
-
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
-
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
+  <header class="container">
+    <img class="header__logo" src="assets/shared/logo.svg" alt="Officelite logo">
+  </header>
+  <section class="sign-up container">
+    <div class="sign-up__content">
+      <div class="sign-up__left">
+        <h1>Work smarter. Save time.</h1>
+        <p>Easily manage your projects. Get on the list and receive in-app perks available only to
+          early subscribers. We are moving into final development and getting ready for official launch soon.</p>
+        <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+        <h3 class="sign-up__countdown-heading extra-ls">Coming <span>4 Nov 2020</span></h3>
+        <div class="sign-up__countdown">
+          <div class="sign-up__time bg-royal-blue-opaque">
+            <h1 class="txt-primary">47</h1>
+            <p class="p2">Days</p>
+          </div>
+          <div class="sign-up__time bg-royal-blue-opaque">
+            <h1 class="txt-primary">07</h1>
+            <p class="p2">Hours</p>
+          </div>
+          <div class="sign-up__time bg-royal-blue-opaque">
+            <h1 class="txt-primary"> 56</h1>
+            <p class="p2">Min</p>
+          </div>
+          <div class="sign-up__time bg-royal-blue-opaque">
+            <h1 class="txt-primary">14</h1>
+            <p class="p2">Sec</p>
+          </div>
+        </div>
+      </div>
+      <div class="sign-up__right">
+        <form class="sign-up__form">
+          <input type="text" name="Name" id="" placeholder="Name">
+          <input type="email" name="Email" id="" placeholder="Email Address">
+          <select>
+            <option value="0">Basic Pack Free</option>
+            <option value="1">Basic Pack Free</option>
+            <option value="2">Pro Pack $9.99</option>
+            <option value="2">Ultimate Pack $19.99</option>
+          </select>
+          <input type="tel" name="Phone Number" id="" placeholder="Phone Number">
+          <input type="text" name="Company" id="" placeholder="Company">
+          <button class="btn-dark" type="submit">Get on the list</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>

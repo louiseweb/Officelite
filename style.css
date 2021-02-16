@@ -24,13 +24,14 @@ img {
 :root {
     --grey: #333950;
     --blue-grey: #747B95;
+    --blue-grey-opaque: 81,117,255;
     --royal-blue: #5175FF;
     --royal-blue-opaque: 81,117,255;
     --white: #FFFFFF;
     --salmon: #F05B5B;
     --sky-blue: #829CFF;
     --dark-grey: #25293A;
-    --grey-opaque: #333950 15.33%;
+    --grey-opaque: #333950;
     --light-blue: #B4C4FF;
 }
 
@@ -299,15 +300,15 @@ button {
     background-position-x: -200px;
 }
 
-.footer__countdown-heading span {
-    color: var(--royal-blue);
+.footer__countdown-heading {
+    position: relative;
+    z-index: 1;
 }
 
 .footer__countdown {
     display: flex;
     position: relative;
-    z-index: 1;
-}
+}  
 
 .footer__time {
     margin-right: 15px;
@@ -316,7 +317,41 @@ button {
     text-align: center;
 }
 
+.footer__btn {
+   position: relative;
+   z-index: 1;
+}
+
 /* Sign Up Page */
+.sign-up-page {
+    position: relative;
+}
+
+.sign-up-page::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 30%;
+    background-image: url('assets/sign-up/bg-pattern-side.svg');
+    background-position: center bottom;
+    background-color: var(--dark-grey);
+    z-index: -1;
+}
+
+.header {
+    height: 111px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 124px;
+}
+
+.header__logo {
+    object-fit: none;
+}
+
 .sign-up__content {
     display: flex;
 }
@@ -336,4 +371,53 @@ button {
     border-radius: 10px;
     padding: 15px;
     text-align: center;
+}
+
+.sign-up__left {
+    max-width: 540px;
+    margin-right: 125px;
+}
+
+.sign-up__header {
+    margin-bottom: 20px;
+}
+
+.sign-up__paragraph {
+    margin-bottom: 30px;
+}
+
+.sign-up__right {
+    height: 508px;
+    max-width: 445px;
+    padding: 0px 42px;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input, select {
+    outline: none;
+    border: none;
+    border-bottom: rgba(var(--blue-grey-opaque), 0.5) 1px solid;
+    width: 360px;
+    height: 68px;
+    padding-left: 10px;
+    background-color: var(--white);
+}
+
+input::placeholder,
+select {
+    color: rgba(var(--blue-grey-opaque), 0.5);
+}
+
+select::placeholder span  {
+    color: var(--dark-grey);
+}
+
+.sign-up__btn {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }

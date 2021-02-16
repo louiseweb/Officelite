@@ -9,15 +9,17 @@
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 
-<body>
-  <header class="container">
-    <img class="header__logo" src="assets/shared/logo.svg" alt="Officelite logo">
+<body class="sign-up-page">
+  <header class="header container">
+    <a href="index.html"><img class="header__logo" src="assets/shared/logo.svg" alt="Officelite logo"></a>
+
   </header>
   <section class="sign-up container">
     <div class="sign-up__content">
       <div class="sign-up__left">
-        <h1>Work smarter. Save time.</h1>
-        <p>Easily manage your projects. Get on the list and receive in-app perks available only to
+        <h1 class="sign-up__header">Work smarter. Save time.</h1>
+        <p class="sign-up__paragraph">Easily manage your projects. Get on the list and receive in-app perks available
+          only to
           early subscribers. We are moving into final development and getting ready for official launch soon.</p>
         <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
         <h3 class="sign-up__countdown-heading extra-ls">Coming <span>4 Nov 2020</span></h3>
@@ -45,18 +47,19 @@
           <input type="text" name="Name" id="" placeholder="Name">
           <input type="email" name="Email" id="" placeholder="Email Address">
           <select>
-            <option value="0">Basic Pack Free</option>
-            <option value="1">Basic Pack Free</option>
-            <option value="2">Pro Pack $9.99</option>
-            <option value="2">Ultimate Pack $19.99</option>
+            <option value="0">Basic Pack <span>Free</span></option>
+            <option value="1">Basic Pack <span>Free</span></option>
+            <option value="2">Pro Pack <span>$9.99</span></option>
+            <option value="2">Ultimate Pack <span>$19.99</span></option>
           </select>
           <input type="tel" name="Phone Number" id="" placeholder="Phone Number">
           <input type="text" name="Company" id="" placeholder="Company">
-          <button class="btn-dark" type="submit">Get on the list</button>
+          <button class="sign-up__btn btn-dark" type="submit">Get on the list</button>
         </form>
       </div>
     </div>
   </section>
 </body>
+<script src="script.js"></script>
 
 </html>
